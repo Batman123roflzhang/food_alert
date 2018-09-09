@@ -41,7 +41,7 @@ pod install
 
 ## Notes
 
-- Keynote report of this project is included in [food alert prez.key](food alert prez.key).
+- Keynote report of this project is included in [food_alert_presentation.key](food_alert_presentation.key).
 
 ### Server side
 
