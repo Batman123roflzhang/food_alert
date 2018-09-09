@@ -2,5 +2,9 @@
 __pycache__/
 /server/data.pkl
 .DS_Store
-app/Pods/
-app/DerivedData/
+/app/Pods/
+/app/DerivedData/
+/app/food.mlmodel
+/app/SeeFood.xcworkspace/xcuserdata/
+/app/SeeFood.xcodeproj/xcuserdata/
+/app/SeeFood.xcodeproj/project.xcworkspace/xcuserdata/

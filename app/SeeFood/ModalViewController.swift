@@ -14,7 +14,12 @@ class ModalViewController: UIViewController {
   @IBOutlet weak var noDataLabel: UILabel!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var proteinLabel: UILabel!
+  @IBOutlet weak var sugarsLabel: UILabel!
+  @IBOutlet weak var energyLabel: UILabel!
+  @IBOutlet weak var fatLabel: UILabel!
+    
   @IBOutlet weak var overallLabel: UILabel!
+  @IBOutlet weak var carbohydrateLabel: UILabel!
   @IBOutlet weak var class1Label: UILabel!
   @IBOutlet weak var class2Label: UILabel!
   @IBOutlet weak var class3Label: UILabel!
@@ -39,15 +44,23 @@ class ModalViewController: UIViewController {
             let overallRatings = JSON["return_ratings"] as! NSNumber
             let nutritionRatings = JSON["nutrition_ratings"] as! NSNumber
             let protein = JSON["protein"] as! NSNumber
+            let sugars = JSON["sugars"] as! NSNumber
+            let carbohydrate = JSON["carbohydrate"] as! NSNumber
+            let fat = JSON["fat"] as! NSNumber
+            let energy = JSON["energy"] as! NSNumber
             let numClassOne = JSON["num_class_1"] as! NSNumber
             let numClassTwo = JSON["num_class_2"] as! NSNumber
             let numClassThree = JSON["num_class_3"] as! NSNumber
-            self.proteinLabel.text = "Protein: \(protein) g"
-            self.overallLabel.text = "Overall Ratings: \(overallRatings)"
-            self.nutritionLabel.text = "Nutrition Ratings: \(nutritionRatings)"
-            self.class1Label.text = "Class I: \(numClassOne)"
-            self.class2Label.text = "Class II: \(numClassTwo)"
-            self.class3Label.text = "Class III: \(numClassThree)"
+            self.proteinLabel.text = "- Protein (per 100g): \(protein) g"
+            self.sugarsLabel.text = "- Sugars (per 100g): \(sugars) g"
+            self.carbohydrateLabel.text = "- Carbohydrates (per 100g): \(carbohydrate) g"
+            self.fatLabel.text = "- Fat (per 100g): \(fat) g"
+            self.energyLabel.text = "- Calories (per 100g): \(energy) J"
+            self.overallLabel.text = "\(overallRatings)"
+            self.nutritionLabel.text = "Nutrition Rating: \(nutritionRatings)"
+            self.class1Label.text = "Number of Class I Recall: \(numClassOne)"
+            self.class2Label.text = "Number of Class II Recall: \(numClassTwo)"
+            self.class3Label.text = "Number of Class III Recall: \(numClassThree)"
           } else {
             self.contentView.isHidden = true
             self.noDataLabel.isHidden = false
