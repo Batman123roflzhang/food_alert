@@ -44,6 +44,7 @@ pod install
 ## Notes
 
 - Keynote report of this project is included in [food_alert_presentation.key](food_alert_presentation.key).
+- A list of all 101 categories of food of Food-101 dataset is available [here](https://github.com/alpapado/food-101/blob/master/data/meta/classes.txt).
 
 ### Server side
 
