@@ -800,7 +800,7 @@
         "id": "pizza",
         "name": "pizza",
         "nutrition-per-100g": {
-            "energy": 730,
+            "energy": 1200,
             "protein": 13.5,
             "fat": 10.4,
             "saturated-fat": 10.3,
@@ -815,7 +815,7 @@
         "id": "sushi",
         "name": "sushi",
         "nutrition-per-100g": {
-            "energy": 730,
+            "energy": 459,
             "protein": 15.4,
             "fat": 12.4,
             "trans-fat": 0.1,
@@ -831,7 +831,7 @@
         "id": "Waffles",
         "name": "Waffles",
         "nutrition-per-100g": {
-            "energy": 2050,
+            "energy": 340,
             "protein": 2.2,
             "fat": 13.4,
             "trans-fat": 3.2,
@@ -863,7 +863,7 @@
         "id": "steak",
         "name": "steak",
         "nutrition-per-100g": {
-            "energy": 1570,
+            "energy": 790,
             "protein": 79,
             "fat": 7,
             "trans-fat": 0.2,
