@@ -41,6 +41,8 @@ pod install
 
 ## Notes
 
+- Keynote report of this project is included in [food alert prez.key](food alert prez.key).
+
 ### Server side
 
 - Provide an api that can handle GET request from client in following format:
