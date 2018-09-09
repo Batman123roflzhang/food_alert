@@ -1,5 +1,7 @@
 # Food alert
 
+Food alert is a hackathon project developed by [Yi Hsiao](https://github.com/hsiaoyi0504/), [Robert Zhang](https://github.com/Batman123roflzhang), [Andy Chien](https://github.com/hellosirandy), and [Angela Ho](https://github.com/angelaho0504) together at [2018 MedHacks](https://medhacks.org/2018/index.html). Devpost project is available at [https://devpost.com/software/food-alert-20gn58](https://devpost.com/software/food-alert-20gn58).
+
 ## Prerequisite
 
 ### Server
