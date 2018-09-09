@@ -2,3 +2,5 @@
 __pycache__/
 /server/data.pkl
 .DS_Store
+app/Pods/
+app/DerivedData/
