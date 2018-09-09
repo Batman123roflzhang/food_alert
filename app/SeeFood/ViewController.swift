@@ -61,32 +61,6 @@ class ViewController: UIViewController, FrameExtractorDelegate {
     }
   }
 
-  func addEmoji(id: String) -> String {
-    switch id {
-    case "pizza":
-      return "🍕"
-    case "hot dog":
-      return "🌭"
-    case "chicken wings":
-      return "🍗"
-    case "french fries":
-      return "🍟"
-    case "sushi":
-      return "🍣"
-    case "chocolate cake":
-      return "🍫🍰"
-    case "donut":
-      return "🍩"
-    case "spaghetti bolognese":
-      return "🍝"
-    case "caesar salad":
-      return "🥗"
-    case "macaroni and cheese":
-      return "🧀"
-    default:
-      return ""
-    }
-  }
   func detectScene(image: CIImage) {
     guard let model = try? VNCoreMLModel(for: food().model) else {
       fatalError()
@@ -102,30 +76,13 @@ class ViewController: UIViewController, FrameExtractorDelegate {
       DispatchQueue.main.async { [unowned self] in
         if let first = results.first {
           if (first.confidence > 0.6) {
-              self.result = first.identifier
-//            self.confirmButton.isHidden = false
-//            let vc = ModalViewController()
-//            vc.titleLabel.text = first.identifier
-//              self.iSee.text = "I see \(first.identifier) \(self.addEmoji(id: first.identifier))"
+            self.result = first.identifier
             self.status = true
-              // print (first.confidence > 0.5)
-              // self.settingImage = false
-          } else {
-//            self.confirmButton.isHidden = true
           }
           if (first.confidence > 0.01) {
             self.settingImage = false
           }
         }
-        
-//        results.forEach({ (result) in
-//          if Int(result.confidence * 100) > 1 {
-//            self.settingImage = false
-//            print("\(Int(result.confidence * 100))% it's \(result.identifier) ")
-//          }
-//        })
-       // print("********************************")
-        
       }
     }
     let handler = VNImageRequestHandler(ciImage: image)

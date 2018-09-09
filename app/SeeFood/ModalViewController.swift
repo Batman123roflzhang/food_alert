@@ -1,10 +1,5 @@
-//
 //  ModalViewController.swift
-//  SeeFood
-//
-//  Created by Shao-An Chien on 9/8/18.
-//  Copyright © 2018 Reza Shirazian. All rights reserved.
-//
+//  This view controller will create the detail page of recognized food
 
 import UIKit
 import Alamofire
@@ -30,8 +25,6 @@ class ModalViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-//    titleLabel.text = myString
     Alamofire.request("http://hsiaoyi0504.pythonanywhere.com/food/" + myString, method: .get)
       .responseJSON { response in
         if let JSON = response.result.value as? [String: Any] {
@@ -65,32 +58,18 @@ class ModalViewController: UIViewController {
             self.contentView.isHidden = true
             self.noDataLabel.isHidden = false
           }
-          
         }
-    }
-
-
-    // Do any additional setup after loading the view.
+      }
   }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
     
 
   @IBAction func dismissModal(_ sender: UIButton) {
-//    dismissModal(sender)
     dismiss(animated: true, completion: nil)
   }
-  /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
